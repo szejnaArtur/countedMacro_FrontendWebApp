@@ -1,4 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+.first-color {
+  background: #388e3c;
+}
+
+.second-color {
+  background: #8bc34a;
+}
+
+.third-color {
+  background: #dce775;
+}
+
+.fourth-color {
+  background: #fff59d;
+}
 
 html, body {
   width: 100%;
@@ -32,8 +47,8 @@ code {
 }
 
 .area{
-  background: #dbab77;
-  background: -webkit-linear-gradient(to left, #f6d1af, #dbab77);
+  background: rgb(139, 195, 74);
+  background: -webkit-linear-gradient(to left, rgb(220, 231, 117), rgb(139, 195, 74));
   width: 100%;
   height:100vh;
 }
