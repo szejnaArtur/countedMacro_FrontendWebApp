@@ -93,7 +93,7 @@ const expandingTransition = {
     stiffness: 30,
 }
 
-const AccountBox = (probs) => {
+const AccountBox = (props) => {
 
     const [isExpanded, setIsExpanded] = useState(false);
     const [active, setActive] = useState("signIn");
@@ -155,7 +155,7 @@ const AccountBox = (probs) => {
                     </HeaderContainer>}
                 </TopContainer>
                 <InnerContainer>
-                    {active === "signIn" && <LoginForm />}
+                    {active === "signIn" && <LoginForm click={props.click}/>}
                     {active === "signUp" && <SignUpForm />}
                     {active === "forget" && <ForgetForm />}
                 </InnerContainer>

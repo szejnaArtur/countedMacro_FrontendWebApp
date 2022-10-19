@@ -1,6 +1,14 @@
-import './App.css';
+import {useState} from "react";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import styled from "styled-components";
-import AccountBox from "./components/accountBox";
+
+import './App.css';
+
+import AccountBox from "./components/accountBox/index";
+import Home from './components/mainContent/Home';
+import AuthenticationService from './components/authentication/authenticationService';
+import AuthenticationRoute from './components/authentication/AuthenticationRoute';
+
 
 const AppContainer = styled.div`
   width: 100%;
@@ -12,25 +20,58 @@ const AppContainer = styled.div`
 `;
 
 function App() {
+
+    const [isUserLoggedIn, setIsUserLoggedIn] = useState(AuthenticationService.isUserLoggedIn());
+
     return (
         <>
-            <div className="area">
-                <ul className="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <AppContainer>
-                    <AccountBox/>
-                </AppContainer>
-            </div>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" exact element={
+                        <div className="area">
+                            <ul className="circles">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <AppContainer>
+                                <AccountBox click={setIsUserLoggedIn}/>
+                            </AppContainer>
+                        </div>
+                    }/>
+                    <Route path="/login" element={
+                        <div className="area">
+                            <ul className="circles">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <AppContainer>
+                                <AccountBox click={setIsUserLoggedIn}/>
+                            </AppContainer>
+                        </div>
+                    }/>
+                    <Route path="/home" element={
+                        <AuthenticationRoute>
+                            <Home/>
+                        </AuthenticationRoute>
+                    }/>
+                </Routes>
+            </BrowserRouter>
         </>
     );
 }
