@@ -4,10 +4,11 @@ import styled from "styled-components";
 
 import './App.css';
 
-import AccountBox from "./components/accountBox/index";
+import AccountBox from "./components/accountBox/AccountBox";
 import Home from './components/mainContent/Home';
-import AuthenticationService from './components/authentication/authenticationService';
+import AuthenticationService from './components/authentication/AuthenticationService';
 import AuthenticationRoute from './components/authentication/AuthenticationRoute';
+import Navbar from "./components/responsive/navbar";
 
 
 const AppContainer = styled.div`
@@ -67,7 +68,10 @@ function App() {
                     }/>
                     <Route path="/home" element={
                         <AuthenticationRoute>
-                            <Home/>
+                            <>
+                                <Navbar/>
+                                <Home/>
+                            </>
                         </AuthenticationRoute>
                     }/>
                 </Routes>

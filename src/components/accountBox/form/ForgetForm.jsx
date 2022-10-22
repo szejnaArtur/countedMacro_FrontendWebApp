@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
-import {BoldLink, BoxContainer, FormContainer, Input, MutedLink, SubmitButton} from "./common";
-import {Marginer} from "../marginer";
-import {AccountContext} from "./accountContext";
+import {BoldLink, BoxContainer, FormContainer, Input, MutedLink, SubmitButton} from "../Common";
+import {Marginer} from "../../marginer/Marginer";
+import {AccountContext} from "../AccountContext";
 
 
 const LoginForm = () => {

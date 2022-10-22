@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import LoginForm from './loginForm';
+import LoginForm from './form/LoginForm';
 import {motion} from "framer-motion";
-import {AccountContext} from "./accountContext";
-import SignUpForm from "./signUpForm";
-import ForgetForm from "./forgetForm";
+import {AccountContext} from "./AccountContext";
+import SignUpForm from "./form/SignUpForm";
+import ForgetForm from "./form/ForgetForm";
 
 const BoxContainer = styled.div`
   width: 280px;

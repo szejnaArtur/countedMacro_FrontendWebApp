@@ -1,11 +1,20 @@
 import React, {useContext, useState} from 'react';
 import { useNavigate } from "react-router-dom";
 
-import {BoldLink, BoxContainer, FormContainer, Input, MutedLink, SubmitButton} from "./common";
-import {Marginer} from "../marginer";
-import {AccountContext} from "./accountContext";
-import AuthenticationService from '../authentication/authenticationService.js';
+import {BoldLink, BoxContainer, FormContainer, Input, MutedLink, SubmitButton} from "../Common";
+import {Marginer} from "../../marginer/Marginer";
+import {AccountContext} from "../AccountContext";
+import AuthenticationService from '../../authentication/AuthenticationService.js';
+import styled from "styled-components";
 
+const Valider = styled.div`
+  height: 30px;
+  width: 30px;
+  margin: 8px;
+  position: absolute;
+  background: #fff59d;
+  text-align: center;
+`;
 
 const LoginForm = (props) => {
 
