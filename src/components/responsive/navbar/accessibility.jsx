@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const AccessibilityContainer = styled.div`
+  margin-left: 10px;
   display: flex;
 `;
 
